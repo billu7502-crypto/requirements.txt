@@ -224,7 +224,7 @@ def getad(call):
 
     # VPLink URL
     final = f"https://t.me/{BOT_USERNAME}?start=ad_{code}"
-    vp = f"https://vplink.in/api?api={bc7622086045fb1a6029b2c2df6f87deee61b71e}&url={final}"
+    vp = f"https://vplink.in/api?api={VPLINK_API_KEY}&url={final}"
 
     kb = types.InlineKeyboardMarkup()
     kb.add(types.InlineKeyboardButton("🎬 Watch Ad", url=vp))
