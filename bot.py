@@ -173,7 +173,7 @@ def start(message):
                 user = get_user(uid)
                 if user["referred_by"] is None:
                     cur.execute("UPDATE users SET referred_by=? WHERE user_id=?", (refid, uid))
-                    cur.execute("UPDATE users SET credits = credits + ? WHERE user_id=?", (refid, CREDITS_PER_REF))
+                    cur.execute("UPDATE users SET credits = credits + ? WHERE user_id=?", (CREDITS_PER_REF, refid))
                     conn.commit()
 
     missing = check_join(uid)
